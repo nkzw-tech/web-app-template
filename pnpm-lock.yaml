@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       fbtee:
-        specifier: ^0.3.1
-        version: 0.3.1(@nkzw/babel-plugin-fbtee-runtime@0.3.0(@nkzw/babel-plugin-fbtee@0.3.0))(@nkzw/babel-plugin-fbtee@0.3.0)(react@19.1.0)
+        specifier: ^0.3.2
+        version: 0.3.2(@nkzw/babel-plugin-fbtee-runtime@0.3.0(@nkzw/babel-plugin-fbtee@0.3.0))(@nkzw/babel-plugin-fbtee@0.3.0)(react@19.1.0)
       react:
         specifier: ^19.1.0
         version: 19.1.0
@@ -1610,8 +1610,8 @@ packages:
   fastq@1.19.1:
     resolution: {integrity: sha512-GwLTyxkCXjXbxqIhTsMI2Nui8huMPtnxg7krajPJAjnEG/iiOS7i+zCtWGZR9G0NBKbXKh6X9m9UIsYX/N6vvQ==}
 
-  fbtee@0.3.1:
-    resolution: {integrity: sha512-ewP5c8c6Bqddv5FIPEhR1zIMr5Xc4KAMWSbxBEyFT+1m2b2IygWhSBk9AQUIVCxYkmb73AE602VK1Kknt4DUeQ==}
+  fbtee@0.3.2:
+    resolution: {integrity: sha512-NKIA86W1oKCVlZSzjzwrNbAtPhirAkBVGK7T0nATRQm/HxQrGcdYACnChyJbTTWh+2Y0c4UOaW4UIVXuXJxZsA==}
     peerDependencies:
       '@nkzw/babel-plugin-fbtee': ^0.3.0
       '@nkzw/babel-plugin-fbtee-runtime': ^0.3.0
@@ -4573,7 +4573,7 @@ snapshots:
     dependencies:
       reusify: 1.1.0
 
-  fbtee@0.3.1(@nkzw/babel-plugin-fbtee-runtime@0.3.0(@nkzw/babel-plugin-fbtee@0.3.0))(@nkzw/babel-plugin-fbtee@0.3.0)(react@19.1.0):
+  fbtee@0.3.2(@nkzw/babel-plugin-fbtee-runtime@0.3.0(@nkzw/babel-plugin-fbtee@0.3.0))(@nkzw/babel-plugin-fbtee@0.3.0)(react@19.1.0):
     dependencies:
       '@nkzw/babel-plugin-fbtee': 0.3.0
       '@nkzw/babel-plugin-fbtee-runtime': 0.3.0(@nkzw/babel-plugin-fbtee@0.3.0)

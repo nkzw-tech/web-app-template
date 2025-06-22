@@ -1,5 +1,5 @@
 import { useLocaleContext } from 'fbtee';
-import { AnchorHTMLAttributes, Fragment } from 'react';
+import { AnchorHTMLAttributes } from 'react';
 import {
   LinkProps,
   Link as ReactRouterLink,
@@ -108,13 +108,10 @@ const About = () => (
 );
 
 export default function App() {
-  const { locale } = useLocaleContext();
   return (
-    <Fragment key={locale}>
-      <Routes>
-        <Route element={<Home />} path="/" />
-        <Route element={<About />} path="/about" />
-      </Routes>
-    </Fragment>
+    <Routes>
+      <Route element={<Home />} path="/" />
+      <Route element={<About />} path="/about" />
+    </Routes>
   );
 }
