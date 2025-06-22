@@ -5,6 +5,7 @@ import './App.css';
 import { LocaleContext } from 'fbtee';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
+import { BrowserRouter } from 'react-router';
 import AvailableLanguages from './AvailableLanguages.tsx';
 
 const clientLocales = [navigator.language, ...navigator.languages];
@@ -23,7 +24,9 @@ createRoot(document.getElementById('root')!).render(
     loadLocale={loadLocale}
   >
     <StrictMode>
-      <App />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </StrictMode>
   </LocaleContext>,
 );

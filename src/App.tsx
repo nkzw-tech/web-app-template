@@ -1,12 +1,18 @@
 import { useLocaleContext } from 'fbtee';
 import { AnchorHTMLAttributes, Fragment } from 'react';
+import {
+  LinkProps,
+  Link as ReactRouterLink,
+  Route,
+  Routes,
+} from 'react-router';
 import AvailableLanguages from './AvailableLanguages.tsx';
 
 const Link = ({
   className,
   ...props
-}: AnchorHTMLAttributes<HTMLAnchorElement>) => (
-  <a
+}: LinkProps & AnchorHTMLAttributes<HTMLAnchorElement>) => (
+  <ReactRouterLink
     className={
       'text-pink-500 underline hover:no-underline dark:text-pink-400' +
       (className ? ` ${className}` : '')
@@ -20,17 +26,17 @@ const LocaleSwitcher = () => {
 
   return (
     <div>
-      <Link
-        className="cursor-pointer select-none"
+      <a
+        className="cursor-pointer text-pink-500 underline select-none hover:no-underline dark:text-pink-400"
         onClick={() => setLocale(locale === 'ja_JP' ? 'en_US' : 'ja_JP')}
       >
         {AvailableLanguages.get(locale)}
-      </Link>
+      </a>
     </div>
   );
 };
 
-const Card = () => {
+const Home = () => {
   return (
     <div className="m-6 mx-auto w-8/12 rounded-sm border border-gray-200 p-4 shadow-md dark:border-neutral-600 dark:bg-neutral-800 dark:shadow-none">
       <div className="flex flex-nowrap items-center justify-between gap-2">
@@ -49,19 +55,19 @@ const Card = () => {
           Using{' '}
           <fbt:list
             items={[
-              <Link href="https://vitejs.dev/" key="vite">
+              <Link key="vite" to="https://vitejs.dev/">
                 Vite
               </Link>,
-              <Link href="https://reactjs.org/" key="react">
+              <Link key="react" to="https://reactjs.org/">
                 React
               </Link>,
-              <Link href="https://www.typescriptlang.org/" key="typescript">
+              <Link key="typescript" to="https://www.typescriptlang.org/">
                 TypeScript
               </Link>,
-              <Link href="https://tailwindcss.com/" key="tailwind">
+              <Link key="tailwind" to="https://tailwindcss.com/">
                 Tailwind
               </Link>,
-              <Link href="https://github.com/nkzw-tech/fbtee" key="fbtee">
+              <Link key="fbtee" to="https://github.com/nkzw-tech/fbtee">
                 fbtee
               </Link>,
             ]}
@@ -78,15 +84,37 @@ const Card = () => {
           for live updates.
         </fbt>
       </p>
+      <p className="my-4">
+        <Link to="/about">
+          <fbt desc="About link">About this template</fbt>
+        </Link>
+      </p>
     </div>
   );
 };
+
+const About = () => (
+  <div className="m-6 mx-auto w-8/12 rounded-sm border border-gray-200 p-4 shadow-md dark:border-neutral-600 dark:bg-neutral-800 dark:shadow-none">
+    <h1 className="text-4xl">
+      <fbt desc="About">About</fbt>
+    </h1>
+    <p className="my-4">🤘</p>
+    <p className="my-4">
+      <Link to="/">
+        <fbt desc="Back to home link">Home</fbt>
+      </Link>
+    </p>
+  </div>
+);
 
 export default function App() {
   const { locale } = useLocaleContext();
   return (
     <Fragment key={locale}>
-      <Card />
+      <Routes>
+        <Route element={<Home />} path="/" />
+        <Route element={<About />} path="/about" />
+      </Routes>
     </Fragment>
   );
 }

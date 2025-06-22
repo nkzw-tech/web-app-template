@@ -13,6 +13,7 @@ Read [the blog post about this template](https://cpojer.net/posts/fastest-fronte
 - [React](https://reactjs.org/) with [React Compiler](https://react.dev/learn/react-compiler) enabled
 - [Tailwind](https://tailwindcss.com/)
 - [fbtee](https://github.com/nkzw-tech/fbtee) for i18n
+- [React Router](https://reactrouter.com/)
 - [TypeScript](https://www.typescriptlang.org)
 - [pnpm](https://pnpm.io/)
 
