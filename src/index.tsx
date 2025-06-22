@@ -3,6 +3,7 @@
 import App from './App.tsx';
 import './App.css';
 import { LocaleContext } from 'fbtee';
+import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import AvailableLanguages from './AvailableLanguages.tsx';
 
@@ -21,6 +22,8 @@ createRoot(document.getElementById('root')!).render(
     clientLocales={clientLocales}
     loadLocale={loadLocale}
   >
-    <App />
+    <StrictMode>
+      <App />
+    </StrictMode>
   </LocaleContext>,
 );
