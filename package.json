@@ -1,22 +1,41 @@
 {
   "name": "@nkzw/vite-ts-react-tailwind",
   "version": "0.0.1",
-  "author": "Christoph Nakazawa <christoph.pojer@gmail.com>",
   "repository": {
     "type": "git",
     "url": "git://github.com/cpojer/vite-ts-react-tailwind.git"
   },
+  "author": "Christoph Nakazawa <christoph.pojer@gmail.com>",
   "type": "module",
-  "engines": {
-    "node": ">=23.0.0",
-    "pnpm": ">=10.0.0"
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite dev",
+    "dev:setup": "pnpm fbtee",
+    "fbtee": "pnpm run fbtee:manifest && pnpm run fbtee:collect && pnpm run fbtee:translate",
+    "fbtee:collect": "fbtee collect --manifest < .src_manifest.json > source_strings.json",
+    "fbtee:manifest": "fbtee manifest --src src",
+    "fbtee:translate": "fbtee translate --source-strings source_strings.json --translations translations/*.json --jenkins --output-dir src/translations/",
+    "format": "prettier --write .",
+    "preinstall": "command -v git >/dev/null 2>&1 && git config core.hooksPath git-hooks || exit 0",
+    "lint": "eslint --cache .",
+    "lint:format": "prettier --cache --check .",
+    "test": "npm-run-all --parallel tsc:check vitest:run lint lint:format",
+    "tsc:check": "tsc",
+    "vitest:run": "vitest run"
   },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ],
   "dependencies": {
+    "fbtee": "^0.3.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^4.4.2",
+    "@nkzw/babel-preset-fbtee": "^0.3.0",
     "@nkzw/eslint-config": "^3.0.1",
     "@swc/core": "^1.12.5",
     "@tailwindcss/postcss": "^4.1.10",
@@ -29,6 +48,7 @@
     "npm-run-all2": "^8.0.4",
     "postcss": "^8.5.6",
     "prettier": "^3.5.3",
+    "prettier-plugin-packagejson": "^2.5.15",
     "prettier-plugin-tailwindcss": "^0.6.13",
     "tailwindcss": "^4.1.10",
     "ts-node": "^10.9.2",
@@ -36,20 +56,8 @@
     "vite": "^6.3.5",
     "vitest": "^3.2.4"
   },
-  "scripts": {
-    "preinstall": "command -v git >/dev/null 2>&1 && git config core.hooksPath git-hooks || exit 0",
-    "build": "vite build",
-    "dev": "vite dev",
-    "format": "prettier --write .",
-    "lint:format": "prettier --cache --check .",
-    "lint": "eslint --cache .",
-    "test": "npm-run-all --parallel tsc:check vitest:run lint lint:format",
-    "tsc:check": "tsc",
-    "vitest:run": "vitest run"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not op_mini all"
-  ]
+  "engines": {
+    "node": ">=23.0.0",
+    "pnpm": ">=10.0.0"
+  }
 }

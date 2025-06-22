@@ -4,20 +4,23 @@ _Minimal, sensible defaults, fast._
 
 Read [the blog post about this template](https://cpojer.net/posts/fastest-frontend-tooling-in-2022).
 
+<img src="https://github.com/user-attachments/assets/9a19ed15-1fcd-447e-bcd9-b1d9f7902555"  width="49%" />
+<img src="https://github.com/user-attachments/assets/6ec7a315-5650-4d46-aedf-82b7c16f52ae"  width="49%" />
+
 ## Technologies
 
 - [Vite](https://vitejs.dev/)
-- [React](https://reactjs.org/) with [React Compiler](https://react.dev/learn/react-compiler) enabled.
-- [TypeScript](https://www.typescriptlang.org)
+- [React](https://reactjs.org/) with [React Compiler](https://react.dev/learn/react-compiler) enabled
 - [Tailwind](https://tailwindcss.com/)
+- [fbtee](https://github.com/nkzw-tech/fbtee) for i18n
+- [TypeScript](https://www.typescriptlang.org)
 - [pnpm](https://pnpm.io/)
-
-![screenshot of `App.tsx`](./screenshot.png)
 
 ## Setup
 
 - Press the "Use this template" button on the top of this repository's GitHub page.
 - Run `pnpm install` (or `npm install` if you don't use `pnpm`).
+- Run `pnpm dev:setup`.
 - `pnpm dev` for development.
 - Use `pnpm test` to run tests.
 - `pnpm build` for production builds.
@@ -26,7 +29,7 @@ _Note: You can install `pnpm` via `homebrew` on macOS: `brew install pnpm`._
 
 ## Protips for the fastest Developer Experience
 
-- Use [`npm-run-all`](https://github.com/mysticatea/npm-run-all) to parallelize local test runs.
+- Use [`npm-run-all2`](https://github.com/bcomnes/npm-run-all2) to parallelize local test runs.
 - Prettier and eslint have `--cache` flags. Use them!
 - Do not run prettier inside of `eslint`. It commonly takes 50% of the eslint runtime!
 - Automatically sort imports when running prettier/saving the document via [`@ianvs/prettier-plugin-sort-imports`](https://github.com/ianvs/prettier-plugin-sort-imports).
