@@ -16,6 +16,7 @@ Read [the blog post about this template](https://cpojer.net/posts/fastest-fronte
 - [React Router](https://reactrouter.com/)
 - [TypeScript](https://www.typescriptlang.org)
 - [pnpm](https://pnpm.io/)
+- _(Optional)_ [Relay](https://relay.dev/) for data fetching -> check out the [`with-relay` branch](https://github.com/nkzw-tech/web-app-template/tree/with-relay).
 
 ## Setup
 
