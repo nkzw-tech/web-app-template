@@ -18,6 +18,8 @@ Read [the blog post about this template](https://cpojer.net/posts/fastest-fronte
 - [pnpm](https://pnpm.io/)
 - _(Optional)_ [Relay](https://relay.dev/) for data fetching -> check out the [`with-relay` branch](https://github.com/nkzw-tech/web-app-template/tree/with-relay).
 
+Check out the [`nkzw-tech/server-template`](https://github.com/nkzw-tech/server-template) for a GraphQL based server with Pothos and Prisma, or the [`nkzw-tech/expo-app-template`](https://github.com/nkzw-tech/expo-app-template) for building mobile apps.
+
 ## Setup
 
 - Press the "Use this template" button on the top of this repository's GitHub page.
