@@ -13,6 +13,7 @@ Read [the blog post about this template](https://cpojer.net/posts/fastest-fronte
 - [React](https://reactjs.org/) with [React Compiler](https://react.dev/learn/react-compiler) enabled
 - [Tailwind](https://tailwindcss.com/)
 - [fbtee](https://github.com/nkzw-tech/fbtee) for i18n
+- [Better Auth](https://www.better-auth.com/) for authentication
 - [React Router](https://reactrouter.com/)
 - [TypeScript](https://www.typescriptlang.org)
 - [pnpm](https://pnpm.io/)
@@ -38,6 +39,10 @@ _Note: You can install `pnpm` via `homebrew` on macOS: `brew install pnpm`._
 - Do not run prettier inside of `eslint`. It commonly takes 50% of the eslint runtime!
 - Automatically sort imports when running prettier/saving the document via [`@ianvs/prettier-plugin-sort-imports`](https://github.com/ianvs/prettier-plugin-sort-imports).
 - Use `swc` with `ts-node` for fast node scripts with [ESM](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/). See below ↓
+
+## I'm not using Better Auth
+
+You can simply remove everything related to Better Auth in the `src/user` directory.
 
 ## Run node scripts with ESM and TypeScript, fast.
 

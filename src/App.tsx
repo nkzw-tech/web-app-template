@@ -7,6 +7,8 @@ import {
   Routes,
 } from 'react-router';
 import AvailableLanguages from './AvailableLanguages.tsx';
+import SignIn from './user/SignIn.tsx';
+import AuthClient from './user/AuthClient.tsx';
 
 const Link = ({
   className,
@@ -37,6 +39,8 @@ const LocaleSwitcher = () => {
 };
 
 const Home = () => {
+  const { data: session } = AuthClient.useSession();
+
   return (
     <div className="m-6 mx-auto w-8/12 rounded-sm border border-gray-200 p-4 shadow-md dark:border-neutral-600 dark:bg-neutral-800 dark:shadow-none">
       <div className="flex flex-nowrap items-center justify-between gap-2">
@@ -78,12 +82,33 @@ const Home = () => {
       <p className="my-4">
         <fbt desc="Instructions">
           Change{' '}
-          <code className="2py-1 rounded-sm border-1 border-pink-500 bg-neutral-100 px-1 font-mono text-pink-500 dark:border-pink-400 dark:bg-neutral-700 dark:text-pink-400">
+          <code className="py-1 rounded-sm border-1 border-pink-500 bg-neutral-100 px-1 font-mono text-pink-500 dark:border-pink-400 dark:bg-neutral-700 dark:text-pink-400">
             src/App.tsx
           </code>{' '}
           for live updates.
         </fbt>
       </p>
+      <div>
+        {session ? (
+          <div className="flex-col gap-2">
+            <div>
+              <fbt desc="User greeting">
+                Hello, <fbt:param name="name">{session.user.name}</fbt:param>
+              </fbt>
+            </div>
+            <div>
+              <a
+                className="text-pink-500 dark:border-pink-400"
+                onClick={() => AuthClient.signOut()}
+              >
+                <fbt desc="Logout button">Logout</fbt>
+              </a>
+            </div>
+          </div>
+        ) : (
+          <SignIn />
+        )}
+      </div>
       <p className="my-4">
         <Link to="/about">
           <fbt desc="About link">About this template</fbt>

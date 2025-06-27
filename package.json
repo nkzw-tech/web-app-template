@@ -29,6 +29,8 @@
     "not op_mini all"
   ],
   "dependencies": {
+    "@nkzw/define-env": "^1.1.0",
+    "better-auth": "^1.2.10",
     "fbtee": "^0.3.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
