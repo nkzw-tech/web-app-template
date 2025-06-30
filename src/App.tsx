@@ -110,7 +110,7 @@ const Home = () => {
       </p>
       <div>
         {session ? (
-          <Stack gap vertical>
+          <Stack gap={12} vertical>
             <div>
               <fbt desc="User greeting">
                 Hello, <fbt:param name="name">{session.user.name}</fbt:param>
