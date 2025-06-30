@@ -30,6 +30,7 @@
   ],
   "dependencies": {
     "@nkzw/define-env": "^1.1.0",
+    "@nkzw/stack": "^2.0.1",
     "better-auth": "^1.2.12",
     "fbtee": "^0.3.2",
     "react": "^19.1.0",

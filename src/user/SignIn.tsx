@@ -1,5 +1,6 @@
 import { FormEvent, useState } from 'react';
 import AuthClient from './AuthClient.tsx';
+import Stack from '@nkzw/stack';
 
 export default function SignIn() {
   const [email, setEmail] = useState('');
@@ -22,21 +23,24 @@ export default function SignIn() {
   };
 
   return (
-    <div className="flex flex-col gap-2">
+    <Stack gap vertical>
       <h2 className="text-lg font-bold">
         Sign In{' '}
-        <a
-          className="font-normal text-sm"
-          href="https://github.com/nkzw-tech/server-template"
-        >
+        <span className="font-normal text-sm">
           (See{' '}
-          <code className="py-1 rounded-sm border-1 border-pink-500 bg-neutral-100 px-1 font-mono text-pink-500 dark:border-pink-400 dark:bg-neutral-700 dark:text-pink-400">
-            nkzw-tech/server-template
-          </code>
+          <a
+            href="https://github.com/nkzw-tech/server-template"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <code className="py-1 rounded-sm border-1 border-pink-500 bg-neutral-100 px-1 font-mono text-pink-500 dark:border-pink-400 dark:bg-neutral-700 dark:text-pink-400">
+              nkzw-tech/server-template
+            </code>
+          </a>
           )
-        </a>
+        </span>
       </h2>
-      <form className="flex flex-row gap-2" onSubmit={signIn}>
+      <Stack as="form" gap onSubmit={signIn}>
         <input
           className="p-2 rounded-sm border-1 border-pink-500 font-mono text-pink-500 dark:border-pink-400 dark:text-pink-400"
           onChange={(e) => setEmail(e.target.value)}
@@ -57,7 +61,7 @@ export default function SignIn() {
         >
           Sign In
         </button>
-      </form>
-    </div>
+      </Stack>
+    </Stack>
   );
 }
