@@ -2,31 +2,30 @@
 
 import App from './App.tsx';
 import './App.css';
-import { LocaleContext } from 'fbtee';
+import { createLocaleContext } from 'fbtee';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router';
 import AvailableLanguages from './AvailableLanguages.tsx';
 
-const clientLocales = [navigator.language, ...navigator.languages];
+const LocaleContext = createLocaleContext({
+  availableLanguages: AvailableLanguages,
+  clientLocales: [navigator.language, ...navigator.languages],
+  loadLocale: async (locale: string) => {
+    if (locale === 'ja_JP') {
+      return (await import('./translations/ja_JP.json')).default.ja_JP;
+    }
 
-const loadLocale = async (locale: string) => {
-  if (locale === 'ja_JP') {
-    return (await import('./translations/ja_JP.json')).default.ja_JP;
-  }
+    return {};
+  },
+});
 
-  return {};
-};
 createRoot(document.getElementById('root')!).render(
-  <LocaleContext
-    availableLanguages={AvailableLanguages}
-    clientLocales={clientLocales}
-    loadLocale={loadLocale}
-  >
-    <StrictMode>
+  <StrictMode>
+    <LocaleContext>
       <BrowserRouter>
         <App />
       </BrowserRouter>
-    </StrictMode>
-  </LocaleContext>,
+    </LocaleContext>
+  </StrictMode>,
 );
