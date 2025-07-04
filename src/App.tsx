@@ -1,5 +1,5 @@
 import { useLocaleContext } from 'fbtee';
-import { AnchorHTMLAttributes, useTransition } from 'react';
+import { AnchorHTMLAttributes, useTransition, Suspense } from 'react';
 import {
   LinkProps,
   Link as ReactRouterLink,
@@ -10,6 +10,11 @@ import AvailableLanguages from './AvailableLanguages.tsx';
 import SignIn from './user/SignIn.tsx';
 import AuthClient from './user/AuthClient.tsx';
 import Stack from '@nkzw/stack';
+import { graphql, useFragment, useLazyLoadQuery } from 'react-relay/hooks.js';
+import { AppUserCard_user$key } from './__generated__/AppUserCard_user.graphql.ts';
+import isPresent from '@nkzw/core/isPresent.js';
+import { AppRelayEntryPointQuery } from './__generated__/AppRelayEntryPointQuery.graphql.ts';
+import { ErrorBoundary } from 'react-error-boundary';
 
 const Link = ({
   className,
@@ -44,8 +49,62 @@ const LocaleSwitcher = () => {
   );
 };
 
+const UserCard = ({ user: userKey }: { user: AppUserCard_user$key }) => {
+  const user = useFragment(
+    graphql`
+      fragment AppUserCard_user on User {
+        caughtPokemon {
+          edges {
+            node {
+              id
+              nickname
+              pokemon {
+                name
+              }
+              shiny
+            }
+          }
+        }
+      }
+    `,
+    userKey,
+  );
+
+  return (
+    <div className="flex flex-col gap-1">
+      <h2 className="text-lg font-bold">
+        <fbt desc="Collection headline">Pokémon Collection</fbt>
+      </h2>
+      <div className="flex flex-col gap-2">
+        {user.caughtPokemon.edges?.filter(isPresent).map(({ node }) =>
+          node ? (
+            <div className="flex items-center gap-2" key={node.id}>
+              <span>{node.nickname}</span>
+            </div>
+          ) : null,
+        )}
+      </div>
+    </div>
+  );
+};
+
+const RelayEntryPoint = () => {
+  const { viewer } = useLazyLoadQuery<AppRelayEntryPointQuery>(
+    graphql`
+      query AppRelayEntryPointQuery {
+        viewer {
+          ...AppUserCard_user
+        }
+      }
+    `,
+    {},
+  );
+
+  return viewer ? <UserCard user={viewer} /> : null;
+};
+
 const Home = () => {
-  const { data: session } = AuthClient.useSession();
+  const { data: session, isPending } = AuthClient.useSession();
 
   return (
     <div className="m-6 mx-auto w-8/12 rounded-sm border border-gray-200 p-4 shadow-md dark:border-neutral-600 dark:bg-neutral-800 dark:shadow-none">
@@ -71,11 +130,10 @@ const Home = () => {
               <Link key="react" target="_blank" to="https://reactjs.org/">
                 React
               </Link>,
-              <Link
-                key="typescript"
-                target="_blank"
-                to="https://www.typescriptlang.org/"
-              >
+              <Link key="relay" to="https://relay.dev/">
+                Relay
+              </Link>,
+              <Link key="typescript" to="https://www.typescriptlang.org/">
                 TypeScript
               </Link>,
               <Link
@@ -121,6 +179,11 @@ const Home = () => {
                 Hello, <fbt:param name="name">{session.user.name}</fbt:param>
               </fbt>
             </div>
+            <ErrorBoundary fallbackRender={() => null}>
+              <Suspense>
+                <RelayEntryPoint />
+              </Suspense>
+            </ErrorBoundary>
             <div>
               <a
                 className="text-pink-500 dark:border-pink-400"
@@ -130,9 +193,9 @@ const Home = () => {
               </a>
             </div>
           </Stack>
-        ) : (
+        ) : !isPending ? (
           <SignIn />
-        )}
+        ) : null}
       </div>
       <p className="my-4">
         <Link to="/about">
