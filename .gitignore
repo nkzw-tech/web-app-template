@@ -1,7 +1,6 @@
 .enum_manifest.json
 .eslintcache
 .pnpm-debug.log
-.src_manifest.json
 /node_modules/
 coverage/
 dist/
