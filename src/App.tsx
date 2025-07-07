@@ -1,5 +1,5 @@
 import { useLocaleContext } from 'fbtee';
-import { AnchorHTMLAttributes } from 'react';
+import { AnchorHTMLAttributes, useTransition } from 'react';
 import {
   LinkProps,
   Link as ReactRouterLink,
@@ -25,13 +25,18 @@ const Link = ({
 );
 
 const LocaleSwitcher = () => {
+  const [, startTransition] = useTransition();
   const { locale, setLocale } = useLocaleContext();
 
   return (
     <div>
       <a
         className="cursor-pointer text-pink-500 underline select-none hover:no-underline dark:text-pink-400"
-        onClick={() => setLocale(locale === 'ja_JP' ? 'en_US' : 'ja_JP')}
+        onClick={() =>
+          startTransition(() =>
+            setLocale(locale === 'ja_JP' ? 'en_US' : 'ja_JP'),
+          )
+        }
       >
         {AvailableLanguages.get(locale)}
       </a>
