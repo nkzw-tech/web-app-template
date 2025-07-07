@@ -1,9 +1,9 @@
 {
-  "name": "@nkzw/vite-ts-react-tailwind",
+  "name": "@nkzw/web-app-template",
   "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "git://github.com/cpojer/vite-ts-react-tailwind.git"
+    "url": "git://github.com/nkzw-tech/web-app-template.git"
   },
   "author": "Christoph Nakazawa <christoph.pojer@gmail.com>",
   "type": "module",
