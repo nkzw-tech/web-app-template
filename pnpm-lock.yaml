@@ -12,14 +12,14 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0
       '@nkzw/stack':
-        specifier: ^2.1.1
-        version: 2.1.1(react@19.1.0)
+        specifier: ^2.2.0
+        version: 2.2.0(react@19.1.0)
       better-auth:
         specifier: ^1.2.12
         version: 1.2.12
       fbtee:
-        specifier: ^1.2.4
-        version: 1.2.4(@nkzw/babel-plugin-fbtee-runtime@1.2.2(@nkzw/babel-plugin-fbtee@1.2.2))(@nkzw/babel-plugin-fbtee@1.2.2)(react@19.1.0)
+        specifier: ^1.2.5
+        version: 1.2.5(@nkzw/babel-plugin-fbtee-runtime@1.2.5(@nkzw/babel-plugin-fbtee@1.2.5))(@nkzw/babel-plugin-fbtee@1.2.5)(react@19.1.0)
       react:
         specifier: ^19.1.0
         version: 19.1.0
@@ -34,8 +34,8 @@ importers:
         specifier: ^4.4.2
         version: 4.4.2(prettier@3.6.2)
       '@nkzw/babel-preset-fbtee':
-        specifier: ^1.2.2
-        version: 1.2.2
+        specifier: ^1.2.5
+        version: 1.2.5
       '@nkzw/eslint-config':
         specifier: ^3.0.1
         version: 3.0.1(@typescript-eslint/eslint-plugin@8.35.1(@typescript-eslint/parser@8.35.1(eslint@9.30.1(jiti@2.4.2))(typescript@5.8.3))(eslint@9.30.1(jiti@2.4.2))(typescript@5.8.3))(@typescript-eslint/utils@8.35.1(eslint@9.30.1(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.35.1(eslint@9.30.1(jiti@2.4.2))(typescript@5.8.3))(eslint@9.30.1(jiti@2.4.2)))(eslint@9.30.1(jiti@2.4.2))(typescript@5.8.3)
@@ -569,20 +569,20 @@ packages:
   '@napi-rs/wasm-runtime@0.2.11':
     resolution: {integrity: sha512-9DPkXtvHydrcOsopiYpUgPHpmj0HWZKMUnL2dZqpvC42lsratuBG06V5ipyno0fUek5VlFsNQ+AcFATSrJXgMA==}
 
-  '@nkzw/babel-plugin-fbtee-auto-import@1.2.2':
-    resolution: {integrity: sha512-Ba7N1QJp6XfxUHIFe7m5W8Lv1XCXDC1qV/AaoCoNDyta2Atu02M54o6hojuxVKGxlRtBZZ4tDxteRQok4azJBQ==}
+  '@nkzw/babel-plugin-fbtee-auto-import@1.2.5':
+    resolution: {integrity: sha512-zFwhOtvQ0+E8HrGc1jm2IElAUG4362IXhyfn6p9BH9i9q+rWb8aX8alAvjjBoLui122shpfHGm+kOiTpTEcQKA==}
 
-  '@nkzw/babel-plugin-fbtee-runtime@1.2.2':
-    resolution: {integrity: sha512-+4qdipGm1HoVp/Z5zirH5pHsXDeCUyBNkjMEanxSWmc87tyNPeRRpOKewInmqNEi6cPpdhqpb1p5McIPo9o4ng==}
+  '@nkzw/babel-plugin-fbtee-runtime@1.2.5':
+    resolution: {integrity: sha512-gNRVHkjsDbCwUrIdMKJdd7kt3+pXxOa/CUgWJ8AVI8yBXYkBgXWoDQc14wXplAWraXEijbfk+HiVnXkC5NvSnQ==}
     peerDependencies:
-      '@nkzw/babel-plugin-fbtee': ^1.2.2
+      '@nkzw/babel-plugin-fbtee': ^1.2.5
 
-  '@nkzw/babel-plugin-fbtee@1.2.2':
-    resolution: {integrity: sha512-Qw8x/vNXsDjGsPIppumjrWH1WbqFhAwrg2y7AEgxSE6VZ41yofAlAMInP7RxkxEm4RmOYKwMNv+a4QRY7xC04g==}
+  '@nkzw/babel-plugin-fbtee@1.2.5':
+    resolution: {integrity: sha512-SrzMCna0iQjfAn+mv1nK+aCSkIf5zk3HxhGVzE2p0Ref95lXHWjcfrh1RgFJfQlYIuAs0oVyzuR2BkBq3CbCMw==}
     hasBin: true
 
-  '@nkzw/babel-preset-fbtee@1.2.2':
-    resolution: {integrity: sha512-qtAF6xRRGfmLREGee83J6PJr23bnZylXWeXsFB8HkmqEW0aHJKXzOFHHp2G2J9T8wVlFatp/Svuxgxv0koNVsg==}
+  '@nkzw/babel-preset-fbtee@1.2.5':
+    resolution: {integrity: sha512-i6PW3+lof/zf+YOwtACrSZzv631nbF5UvJwwcfItTYT5vEWkw7n5R3O9+yc9kOFoFVsihQb3KFxtHK7/A9XMzg==}
     hasBin: true
 
   '@nkzw/define-env@1.1.0':
@@ -598,8 +598,8 @@ packages:
     peerDependencies:
       eslint: '>= 9'
 
-  '@nkzw/stack@2.1.1':
-    resolution: {integrity: sha512-Yrl8gAqIacRdHBDxVwD/OEJiT3xNYwGgzdM3mQN7Nc/Uxl1dhEmDfqc5zFpvpF5JjA6hF/4KqAX8ma8Y9PhfMA==}
+  '@nkzw/stack@2.2.0':
+    resolution: {integrity: sha512-1cndtRbnrszsl+PgTwj6Wz0SrKKG2y88PPHO5RVttEvy55El+MikREdYVxiS+i4MHb1Z1egdLwsw6Xg+m3uZyA==}
     peerDependencies:
       nativewind: ^4.1.23
       react: '>=17.0.0'
@@ -1769,11 +1769,11 @@ packages:
   fastq@1.19.1:
     resolution: {integrity: sha512-GwLTyxkCXjXbxqIhTsMI2Nui8huMPtnxg7krajPJAjnEG/iiOS7i+zCtWGZR9G0NBKbXKh6X9m9UIsYX/N6vvQ==}
 
-  fbtee@1.2.4:
-    resolution: {integrity: sha512-XTOtBgUVuO/pX/rY3gdVxsV5IPjHfvQN2xWkVRRZIKIxbxippe273du9VU4tUgO7788lSGMVvHZwxVy+7P7xKQ==}
+  fbtee@1.2.5:
+    resolution: {integrity: sha512-VJTly7uetG9L9qXzWXr8J2VywFx/GKEbPAH6Ad3T/xXSoNtyf+vhtzCLBG2kfKZdW9/E/UQle+lUm9wowGBdTA==}
     peerDependencies:
-      '@nkzw/babel-plugin-fbtee': ^1.2.2
-      '@nkzw/babel-plugin-fbtee-runtime': ^1.2.2
+      '@nkzw/babel-plugin-fbtee': ^1.2.5
+      '@nkzw/babel-plugin-fbtee-runtime': ^1.2.5
       react: ^19.0.0
 
   fdir@6.4.6:
@@ -3000,8 +3000,8 @@ packages:
     peerDependencies:
       zod: ^3.25.0
 
-  zod@3.25.74:
-    resolution: {integrity: sha512-J8poo92VuhKjNknViHRAIuuN6li/EwFbAC8OedzI8uxpEPGiXHGQu9wemIAioIpqgfB4SySaJhdk0mH5Y4ICBg==}
+  zod@3.25.75:
+    resolution: {integrity: sha512-OhpzAmVzabPOL6C3A3gpAifqr9MqihV/Msx3gor2b2kviCgcb+HM9SEOpMWwwNp9MRunWnhtAKUoo0AHhjyPPg==}
 
 snapshots:
 
@@ -3480,26 +3480,26 @@ snapshots:
       '@tybys/wasm-util': 0.9.0
     optional: true
 
-  '@nkzw/babel-plugin-fbtee-auto-import@1.2.2':
+  '@nkzw/babel-plugin-fbtee-auto-import@1.2.5':
     dependencies:
       '@babel/core': 7.28.0
       '@babel/types': 7.28.0
-      '@nkzw/babel-plugin-fbtee': 1.2.2
+      '@nkzw/babel-plugin-fbtee': 1.2.5
     transitivePeerDependencies:
       - supports-color
 
-  '@nkzw/babel-plugin-fbtee-runtime@1.2.2(@nkzw/babel-plugin-fbtee@1.2.2)':
+  '@nkzw/babel-plugin-fbtee-runtime@1.2.5(@nkzw/babel-plugin-fbtee@1.2.5)':
     dependencies:
       '@babel/core': 7.28.0
       '@babel/preset-react': 7.27.1(@babel/core@7.28.0)
       '@babel/traverse': 7.28.0
       '@babel/types': 7.28.0
-      '@nkzw/babel-plugin-fbtee': 1.2.2
+      '@nkzw/babel-plugin-fbtee': 1.2.5
       invariant: 2.2.4
     transitivePeerDependencies:
       - supports-color
 
-  '@nkzw/babel-plugin-fbtee@1.2.2':
+  '@nkzw/babel-plugin-fbtee@1.2.5':
     dependencies:
       '@babel/core': 7.28.0
       '@babel/generator': 7.28.0
@@ -3507,7 +3507,7 @@ snapshots:
       '@babel/preset-typescript': 7.27.1(@babel/core@7.28.0)
       '@babel/traverse': 7.28.0
       '@babel/types': 7.28.0
-      '@nkzw/babel-plugin-fbtee-auto-import': 1.2.2
+      '@nkzw/babel-plugin-fbtee-auto-import': 1.2.5
       invariant: 2.2.4
       jest-docblock: 30.0.1
       nullthrows: 1.1.1
@@ -3515,11 +3515,11 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@nkzw/babel-preset-fbtee@1.2.2':
+  '@nkzw/babel-preset-fbtee@1.2.5':
     dependencies:
-      '@nkzw/babel-plugin-fbtee': 1.2.2
-      '@nkzw/babel-plugin-fbtee-auto-import': 1.2.2
-      '@nkzw/babel-plugin-fbtee-runtime': 1.2.2(@nkzw/babel-plugin-fbtee@1.2.2)
+      '@nkzw/babel-plugin-fbtee': 1.2.5
+      '@nkzw/babel-plugin-fbtee-auto-import': 1.2.5
+      '@nkzw/babel-plugin-fbtee-runtime': 1.2.5(@nkzw/babel-plugin-fbtee@1.2.5)
     transitivePeerDependencies:
       - supports-color
 
@@ -3553,7 +3553,7 @@ snapshots:
     dependencies:
       eslint: 9.30.1(jiti@2.4.2)
 
-  '@nkzw/stack@2.1.1(react@19.1.0)':
+  '@nkzw/stack@2.2.0(react@19.1.0)':
     dependencies:
       react: 19.1.0
 
@@ -4256,7 +4256,7 @@ snapshots:
       jose: 6.0.11
       kysely: 0.28.2
       nanostores: 0.11.4
-      zod: 3.25.74
+      zod: 3.25.75
 
   better-call@1.0.11:
     dependencies:
@@ -4688,8 +4688,8 @@ snapshots:
       '@babel/plugin-transform-private-methods': 7.27.1(@babel/core@7.28.0)
       eslint: 9.30.1(jiti@2.4.2)
       hermes-parser: 0.25.1
-      zod: 3.25.74
-      zod-validation-error: 3.5.2(zod@3.25.74)
+      zod: 3.25.75
+      zod-validation-error: 3.5.2(zod@3.25.75)
     transitivePeerDependencies:
       - supports-color
 
@@ -4835,10 +4835,10 @@ snapshots:
     dependencies:
       reusify: 1.1.0
 
-  fbtee@1.2.4(@nkzw/babel-plugin-fbtee-runtime@1.2.2(@nkzw/babel-plugin-fbtee@1.2.2))(@nkzw/babel-plugin-fbtee@1.2.2)(react@19.1.0):
+  fbtee@1.2.5(@nkzw/babel-plugin-fbtee-runtime@1.2.5(@nkzw/babel-plugin-fbtee@1.2.5))(@nkzw/babel-plugin-fbtee@1.2.5)(react@19.1.0):
     dependencies:
-      '@nkzw/babel-plugin-fbtee': 1.2.2
-      '@nkzw/babel-plugin-fbtee-runtime': 1.2.2(@nkzw/babel-plugin-fbtee@1.2.2)
+      '@nkzw/babel-plugin-fbtee': 1.2.5
+      '@nkzw/babel-plugin-fbtee-runtime': 1.2.5(@nkzw/babel-plugin-fbtee@1.2.5)
       invariant: 2.2.4
       react: 19.1.0
 
@@ -6081,8 +6081,8 @@ snapshots:
 
   yocto-queue@0.1.0: {}
 
-  zod-validation-error@3.5.2(zod@3.25.74):
+  zod-validation-error@3.5.2(zod@3.25.75):
     dependencies:
-      zod: 3.25.74
+      zod: 3.25.75
 
-  zod@3.25.74: {}
+  zod@3.25.75: {}
