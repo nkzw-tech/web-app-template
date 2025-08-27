@@ -107,7 +107,7 @@ const Home = () => {
       <p className="my-4">
         <fbt desc="Instructions">
           Change{' '}
-          <code className="py-1 rounded-sm border-1 border-pink-500 bg-neutral-100 px-1 font-mono text-pink-500 dark:border-pink-400 dark:bg-neutral-700 dark:text-pink-400">
+          <code className="rounded-sm border-1 border-pink-500 bg-neutral-100 px-1 py-1 font-mono text-pink-500 dark:border-pink-400 dark:bg-neutral-700 dark:text-pink-400">
             src/App.tsx
           </code>{' '}
           for live updates.
