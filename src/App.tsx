@@ -1,3 +1,4 @@
+import Stack from '@nkzw/stack';
 import { useLocaleContext } from 'fbtee';
 import { AnchorHTMLAttributes, useTransition } from 'react';
 import {
@@ -7,9 +8,8 @@ import {
   Routes,
 } from 'react-router';
 import AvailableLanguages from './AvailableLanguages.tsx';
-import SignIn from './user/SignIn.tsx';
 import AuthClient from './user/AuthClient.tsx';
-import Stack from '@nkzw/stack';
+import SignIn from './user/SignIn.tsx';
 
 const Link = ({
   className,

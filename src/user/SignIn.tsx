@@ -1,6 +1,6 @@
+import Stack from '@nkzw/stack';
 import { FormEvent, useState } from 'react';
 import AuthClient from './AuthClient.tsx';
-import Stack from '@nkzw/stack';
 
 export default function SignIn() {
   const [email, setEmail] = useState('');
