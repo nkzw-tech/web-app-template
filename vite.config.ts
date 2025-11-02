@@ -3,6 +3,7 @@ import nkzw from '@nkzw/oxlint-config';
 import babel from '@rolldown/plugin-babel';
 import tailwindcss from '@tailwindcss/vite';
 import react, { reactCompilerPreset } from '@vitejs/plugin-react';
+import babelPluginRelay from 'babel-plugin-relay';
 import { defineConfig } from 'vite-plus';
 
 export default defineConfig({
@@ -33,6 +34,7 @@ export default defineConfig({
   },
   plugins: [
     babel({
+      plugins: [babelPluginRelay],
       presets: [fbteePreset, reactCompilerPreset()],
     }),
     tailwindcss(),
