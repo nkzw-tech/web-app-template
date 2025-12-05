@@ -17,7 +17,7 @@ const Link = ({
 }: LinkProps & AnchorHTMLAttributes<HTMLAnchorElement>) => (
   <ReactRouterLink
     className={
-      'text-pink-500 underline hover:no-underline dark:text-pink-400' +
+      'text-pink-700 underline hover:no-underline dark:text-pink-400' +
       (className ? ` ${className}` : '')
     }
     {...props}
@@ -31,7 +31,7 @@ const LocaleSwitcher = () => {
   return (
     <div>
       <a
-        className="cursor-pointer text-pink-500 underline select-none hover:no-underline dark:text-pink-400"
+        className="cursor-pointer text-pink-700 underline select-none hover:no-underline dark:text-pink-400"
         onClick={() =>
           startTransition(() =>
             setLocale(locale === 'ja_JP' ? 'en_US' : 'ja_JP'),
@@ -48,7 +48,7 @@ const Home = () => {
   const { data: session } = AuthClient.useSession();
 
   return (
-    <div className="m-6 mx-auto w-8/12 rounded-sm border border-gray-200 p-4 shadow-md dark:border-neutral-600 dark:bg-neutral-800 dark:shadow-none">
+    <div className="m-6 mx-auto w-8/12 rounded-2xl border border-gray-200 p-4 shadow-md dark:border-neutral-600 dark:bg-neutral-800 dark:shadow-none">
       <Stack alignCenter between gap>
         <h1 className="text-4xl">
           <fbt desc="Greeting">Welcome</fbt>
@@ -107,7 +107,7 @@ const Home = () => {
       <p className="my-4">
         <fbt desc="Instructions">
           Change{' '}
-          <code className="rounded-sm border-1 border-pink-500 bg-neutral-100 px-1 py-1 font-mono text-pink-500 dark:border-pink-400 dark:bg-neutral-700 dark:text-pink-400">
+          <code className="rounded-sm border border-pink-700 bg-neutral-100 px-1 py-1 font-mono text-pink-700 dark:border-pink-400 dark:bg-neutral-700 dark:text-pink-400">
             src/App.tsx
           </code>{' '}
           for live updates.
@@ -123,7 +123,7 @@ const Home = () => {
             </div>
             <div>
               <a
-                className="text-pink-500 dark:border-pink-400"
+                className="text-pink-700 dark:border-pink-400"
                 onClick={() => AuthClient.signOut()}
               >
                 <fbt desc="Logout button">Logout</fbt>
