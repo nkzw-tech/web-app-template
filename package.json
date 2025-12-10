@@ -17,7 +17,7 @@
     "lint": "eslint --cache .",
     "lint:format": "prettier --experimental-cli --cache --check .",
     "test": "npm-run-all --parallel tsc:check vitest:run lint lint:format",
-    "tsc:check": "tsc",
+    "tsc:check": "tsgo",
     "vitest:run": "vitest run"
   },
   "browserslist": [
@@ -44,6 +44,7 @@
     "@types/node": "^24.10.1",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
+    "@typescript/native-preview": "7.0.0-dev.20251209.1",
     "@vitejs/plugin-react": "^5.1.1",
     "babel-plugin-react-compiler": "^1.0.0",
     "eslint": "^9.39.1",
