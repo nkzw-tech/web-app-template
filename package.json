@@ -23,23 +23,23 @@
   "dependencies": {
     "@nkzw/define-env": "^1.1.0",
     "@nkzw/stack": "^2.3.2",
-    "better-auth": "^1.4.17",
+    "better-auth": "^1.4.18",
     "fbtee": "^1.7.2",
-    "react": "^19.2.3",
-    "react-dom": "^19.2.3",
-    "react-router": "^7.12.0"
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-router": "^7.13.0"
   },
   "devDependencies": {
     "@nkzw/babel-preset-fbtee": "^1.7.1",
     "@nkzw/eslint-plugin": "^2.0.0",
     "@nkzw/oxlint-config": "^1.0.1",
-    "@swc/core": "^1.15.10",
+    "@swc/core": "^1.15.11",
     "@tailwindcss/vite": "^4.1.18",
-    "@types/node": "^25.0.10",
-    "@types/react": "^19.2.9",
+    "@types/node": "^25.2.3",
+    "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "@typescript/native-preview": "7.0.0-dev.20260120.1",
-    "@vitejs/plugin-react": "^5.1.2",
+    "@typescript/native-preview": "7.0.0-dev.20260212.1",
+    "@vitejs/plugin-react": "^5.1.4",
     "babel-plugin-react-compiler": "^1.0.0",
     "eslint-plugin-no-only-tests": "^3.3.0",
     "eslint-plugin-perfectionist": "^5.5.0",
@@ -52,7 +52,7 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3",
     "vite": "^7.3.1",
-    "vitest": "^4.0.17"
+    "vitest": "^4.0.18"
   },
   "browserslist": [
     ">0.2%",
