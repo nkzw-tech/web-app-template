@@ -1,30 +1,25 @@
 {
   "name": "@nkzw/web-app-template",
   "version": "0.0.1",
+  "author": "Christoph Nakazawa <christoph.pojer@gmail.com>",
   "repository": {
     "type": "git",
     "url": "git://github.com/nkzw-tech/web-app-template.git"
   },
-  "author": "Christoph Nakazawa <christoph.pojer@gmail.com>",
   "type": "module",
   "scripts": {
     "build": "vite build",
     "dev": "vite dev",
     "dev:setup": "pnpm fbtee:all",
     "fbtee:all": "pnpm fbtee collect && pnpm fbtee translate",
-    "format": "prettier --experimental-cli --write .",
-    "preinstall": "command -v git >/dev/null 2>&1 && git config core.hooksPath git-hooks || exit 0",
+    "format": "oxfmt",
     "lint": "eslint --cache .",
-    "lint:format": "prettier --experimental-cli --cache --check .",
+    "lint:format": "oxfmt --check",
+    "preinstall": "command -v git >/dev/null 2>&1 && git config core.hooksPath git-hooks || exit 0",
     "test": "npm-run-all --parallel tsc:check vitest:run lint lint:format",
     "tsc:check": "tsgo",
     "vitest:run": "vitest run"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not op_mini all"
-  ],
   "dependencies": {
     "@nkzw/define-env": "^1.1.0",
     "@nkzw/stack": "^2.3.2",
@@ -35,10 +30,8 @@
     "react-router": "^7.12.0"
   },
   "devDependencies": {
-    "@ianvs/prettier-plugin-sort-imports": "^4.7.0",
     "@nkzw/babel-preset-fbtee": "^1.7.1",
     "@nkzw/eslint-config": "^3.3.0",
-    "@prettier/plugin-oxc": "^0.1.3",
     "@swc/core": "^1.15.10",
     "@tailwindcss/vite": "^4.1.18",
     "@types/node": "^25.0.10",
@@ -49,15 +42,18 @@
     "babel-plugin-react-compiler": "^1.0.0",
     "eslint": "^9.39.2",
     "npm-run-all2": "^8.0.4",
-    "prettier": "^3.8.1",
-    "prettier-plugin-packagejson": "^3.0.0",
-    "prettier-plugin-tailwindcss": "^0.7.2",
+    "oxfmt": "^0.32.0",
     "tailwindcss": "^4.1.18",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3",
     "vite": "^7.3.1",
     "vitest": "^4.0.17"
   },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ],
   "engines": {
     "node": ">=23.0.0",
     "pnpm": ">=10.0.0"

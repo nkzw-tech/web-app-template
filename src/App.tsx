@@ -1,20 +1,12 @@
 import Stack from '@nkzw/stack';
 import { useLocaleContext } from 'fbtee';
 import { AnchorHTMLAttributes, useTransition } from 'react';
-import {
-  LinkProps,
-  Link as ReactRouterLink,
-  Route,
-  Routes,
-} from 'react-router';
+import { LinkProps, Link as ReactRouterLink, Route, Routes } from 'react-router';
 import AvailableLanguages from './AvailableLanguages.tsx';
 import AuthClient from './user/AuthClient.tsx';
 import SignIn from './user/SignIn.tsx';
 
-const Link = ({
-  className,
-  ...props
-}: LinkProps & AnchorHTMLAttributes<HTMLAnchorElement>) => (
+const Link = ({ className, ...props }: LinkProps & AnchorHTMLAttributes<HTMLAnchorElement>) => (
   <ReactRouterLink
     className={
       'text-pink-700 underline hover:no-underline dark:text-pink-400' +
@@ -32,11 +24,7 @@ const LocaleSwitcher = () => {
     <div>
       <a
         className="cursor-pointer text-pink-700 underline select-none hover:no-underline dark:text-pink-400"
-        onClick={() =>
-          startTransition(() =>
-            setLocale(locale === 'ja_JP' ? 'en_US' : 'ja_JP'),
-          )
-        }
+        onClick={() => startTransition(() => setLocale(locale === 'ja_JP' ? 'en_US' : 'ja_JP'))}
       >
         {AvailableLanguages.get(locale)}
       </a>
@@ -71,37 +59,22 @@ const Home = () => {
               <Link key="react" target="_blank" to="https://reactjs.org/">
                 React
               </Link>,
-              <Link
-                key="typescript"
-                target="_blank"
-                to="https://www.typescriptlang.org/"
-              >
+              <Link key="typescript" target="_blank" to="https://www.typescriptlang.org/">
                 TypeScript
               </Link>,
-              <Link
-                key="tailwind"
-                target="_blank"
-                to="https://tailwindcss.com/"
-              >
+              <Link key="tailwind" target="_blank" to="https://tailwindcss.com/">
                 Tailwind
               </Link>,
-              <Link
-                key="fbtee"
-                target="_blank"
-                to="https://github.com/nkzw-tech/fbtee"
-              >
+              <Link key="fbtee" target="_blank" to="https://github.com/nkzw-tech/fbtee">
                 fbtee
               </Link>,
-              <Link
-                key="better-auth"
-                target="_blank"
-                to="https://www.better-auth.com/"
-              >
+              <Link key="better-auth" target="_blank" to="https://www.better-auth.com/">
                 Better Auth
               </Link>,
             ]}
             name="tools"
-          />.
+          />
+          .
         </fbt>
       </p>
       <p className="my-4">

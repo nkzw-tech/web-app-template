@@ -28,11 +28,7 @@ export default function SignIn() {
         Sign In{' '}
         <span className="text-sm font-normal">
           (See{' '}
-          <a
-            href="https://github.com/nkzw-tech/server-template"
-            rel="noreferrer"
-            target="_blank"
-          >
+          <a href="https://github.com/nkzw-tech/server-template" rel="noreferrer" target="_blank">
             <code className="rounded-sm border border-pink-700 bg-neutral-100 px-1 py-1 font-mono text-pink-700 dark:border-pink-400 dark:bg-neutral-700 dark:text-pink-400">
               nkzw-tech/server-template
             </code>

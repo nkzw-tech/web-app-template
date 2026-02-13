@@ -1,0 +1,25 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "singleQuote": true,
+  "experimentalSortImports": {
+    "newlinesBetween": false,
+  },
+  "experimentalSortPackageJson": {
+    "sortScripts": true,
+  },
+  "experimentalTailwindcss": {
+    "stylesheet": "src/App.css",
+  },
+  "ignorePatterns": [
+    "client/dist/",
+    "client/index.html",
+    "client/src/translations/",
+    "coverage/",
+    "dist/",
+    "index.html",
+    "pnpm-lock.yaml",
+    "server/dist",
+    "server/src/graphql/schema.graphql",
+    "server/src/prisma/migrations",
+  ],
+}

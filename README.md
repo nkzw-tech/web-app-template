@@ -35,9 +35,8 @@ _Note: You can install `pnpm` via `homebrew` on macOS: `brew install pnpm`._
 ## Protips for the fastest Developer Experience
 
 - Use [`npm-run-all2`](https://github.com/bcomnes/npm-run-all2) to parallelize local test runs.
-- Prettier and eslint have `--cache` flags. Use them!
-- Do not run prettier inside of `eslint`. It commonly takes 50% of the eslint runtime!
-- Automatically sort imports when running prettier/saving the document via [`@ianvs/prettier-plugin-sort-imports`](https://github.com/ianvs/prettier-plugin-sort-imports).
+- Eslint has a `--cache` flag. Use it!
+- Do not run formatting inside of `eslint`. It commonly takes 50% of the eslint runtime!
 - Use `swc` with `ts-node` for fast node scripts with [ESM](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/). See below ↓
 
 ## I'm not using Better Auth

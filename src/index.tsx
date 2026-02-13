@@ -1,11 +1,11 @@
 /// <reference types="fbtee/ReactTypes.d.ts" />
 
-import App from './App.tsx';
-import './App.css';
 import { createLocaleContext } from 'fbtee';
+import './App.css';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router';
+import App from './App.tsx';
 import AvailableLanguages from './AvailableLanguages.tsx';
 
 const LocaleContext = createLocaleContext({
