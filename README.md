@@ -35,8 +35,7 @@ _Note: You can install `pnpm` via `homebrew` on macOS: `brew install pnpm`._
 ## Protips for the fastest Developer Experience
 
 - Use [`npm-run-all2`](https://github.com/bcomnes/npm-run-all2) to parallelize local test runs.
-- Eslint has a `--cache` flag. Use it!
-- Do not run formatting inside of `eslint`. It commonly takes 50% of the eslint runtime!
+- Use `oxlint` for linting and `oxfmt` for formatting.
 - Use `swc` with `ts-node` for fast node scripts with [ESM](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/). See below ↓
 
 ## I'm not using Better Auth

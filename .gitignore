@@ -1,5 +1,4 @@
 .enum_manifest.json
-.eslintcache
 .pnpm-debug.log
 /node_modules/
 coverage/
