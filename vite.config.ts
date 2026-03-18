@@ -1,19 +1,52 @@
 import fbteePreset from '@nkzw/babel-preset-fbtee';
+import nkzw from '@nkzw/oxlint-config';
+import babel from '@rolldown/plugin-babel';
 import tailwindcss from '@tailwindcss/vite';
-import react from '@vitejs/plugin-react';
-import reactCompiler from 'babel-plugin-react-compiler';
-import { defineConfig } from 'vite';
-import babel from 'vite-plugin-babel';
+import react, { reactCompilerPreset } from '@vitejs/plugin-react';
+import { defineConfig } from 'vite-plus';
 
 export default defineConfig({
+  fmt: {
+    experimentalSortImports: {
+      newlinesBetween: false,
+    },
+    experimentalSortPackageJson: {
+      sortScripts: true,
+    },
+    experimentalTailwindcss: {
+      stylesheet: 'src/App.css',
+    },
+    ignorePatterns: [
+      'coverage/',
+      'dist/',
+      'index.html',
+      'pnpm-lock.yaml',
+      'src/__generated__/',
+      'src/translations/',
+    ],
+    singleQuote: true,
+  },
+  lint: {
+    extends: [nkzw],
+    ignorePatterns: ['dist/', 'vite.config.ts.timestamp-*'],
+    options: { typeAware: true, typeCheck: true },
+  },
   plugins: [
+    // @ts-expect-error
     babel({
-      babelConfig: {
-        plugins: [reactCompiler],
-        presets: [fbteePreset],
-      },
+      presets: [fbteePreset, reactCompilerPreset()],
     }),
     tailwindcss(),
     react(),
   ],
+  run: {
+    tasks: {
+      'test:all': {
+        command: 'vp check && vp test',
+      },
+    },
+  },
+  staged: {
+    '*': 'vp check --fix',
+  },
 });

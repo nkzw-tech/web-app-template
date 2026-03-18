@@ -10,16 +10,14 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [24.x]
+        node-version: [24]
     steps:
       - uses: actions/checkout@v4
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
+      - uses: voidzero-dev/setup-vp@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 10.*
-      - run: pnpm install
-      - run: pnpm dev:setup
-      - run: pnpm test
+          cache: true
+          run-install: true
+      - run: |
+          vp run dev:setup
+          vp run test:all

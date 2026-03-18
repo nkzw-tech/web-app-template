@@ -8,17 +8,9 @@
   },
   "type": "module",
   "scripts": {
-    "build": "vite build",
-    "dev": "vite dev",
-    "dev:setup": "pnpm fbtee:all",
-    "fbtee:all": "pnpm fbtee collect && pnpm fbtee translate",
-    "format": "oxfmt",
-    "lint": "oxlint .",
-    "lint:format": "oxfmt --check",
-    "preinstall": "command -v git >/dev/null 2>&1 && git config core.hooksPath git-hooks || exit 0",
-    "test": "npm-run-all --parallel tsc:check vitest:run lint lint:format",
-    "tsc:check": "tsgo",
-    "vitest:run": "vitest run"
+    "dev:setup": "vp run fbtee:all",
+    "fbtee:all": "vpx fbtee collect && vpx fbtee translate",
+    "prepare": "vp config"
   },
   "dependencies": {
     "@nkzw/define-env": "^1.1.0",
@@ -33,6 +25,7 @@
     "@nkzw/babel-preset-fbtee": "^1.7.3",
     "@nkzw/eslint-plugin": "^2.0.0",
     "@nkzw/oxlint-config": "^1.0.1",
+    "@rolldown/plugin-babel": "^0.2.1",
     "@swc/core": "^1.15.18",
     "@tailwindcss/vite": "^4.2.1",
     "@types/node": "^25.5.0",
@@ -45,15 +38,12 @@
     "eslint-plugin-perfectionist": "^5.7.0",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-unused-imports": "^4.4.1",
-    "npm-run-all2": "^8.0.4",
-    "oxfmt": "^0.41.0",
-    "oxlint": "^1.56.0",
     "tailwindcss": "^4.2.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3",
-    "vite": "^8.0.0",
-    "vite-plugin-babel": "^1.5.1",
-    "vitest": "^4.1.0"
+    "vite": "catalog:",
+    "vite-plus": "catalog:",
+    "vitest": "catalog:"
   },
   "browserslist": [
     ">0.2%",
@@ -63,5 +53,6 @@
   "engines": {
     "node": ">=23.0.0",
     "pnpm": ">=10.0.0"
-  }
+  },
+  "packageManager": "pnpm@10.32.1"
 }
