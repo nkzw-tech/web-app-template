@@ -32,7 +32,6 @@ export default defineConfig({
     options: { typeAware: true, typeCheck: true },
   },
   plugins: [
-    // @ts-expect-error
     babel({
       presets: [fbteePreset, reactCompilerPreset()],
     }),
