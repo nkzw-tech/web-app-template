@@ -15,29 +15,28 @@
   "dependencies": {
     "@nkzw/define-env": "^1.1.0",
     "@nkzw/stack": "^2.3.2",
-    "better-auth": "^1.6.6",
+    "better-auth": "^1.6.9",
     "fbtee": "^1.7.4",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
-    "react-router": "^7.14.2"
+    "react-router": "^7.15.0"
   },
   "devDependencies": {
     "@nkzw/babel-preset-fbtee": "^1.7.4",
     "@nkzw/eslint-plugin": "^2.0.0",
-    "@nkzw/oxlint-config": "^1.1.1",
+    "@nkzw/oxlint-config": "^1.2.1",
     "@rolldown/plugin-babel": "^0.2.3",
-    "@swc/core": "^1.15.30",
+    "@swc/core": "^1.15.33",
     "@tailwindcss/vite": "^4.2.4",
     "@types/node": "^25.6.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "@typescript/native-preview": "7.0.0-dev.20260421.2",
+    "@typescript/native-preview": "7.0.0-dev.20260505.1",
     "@vitejs/plugin-react": "^6.0.1",
     "babel-plugin-react-compiler": "^1.0.0",
-    "eslint-plugin-no-only-tests": "^3.3.0",
+    "eslint-plugin-no-only-tests": "^3.4.0",
     "eslint-plugin-perfectionist": "^5.9.0",
     "eslint-plugin-react-hooks": "^7.1.1",
-    "eslint-plugin-unused-imports": "^4.4.1",
     "tailwindcss": "^4.2.4",
     "ts-node": "^10.9.2",
     "typescript": "^6.0.3",
@@ -52,7 +51,7 @@
   ],
   "engines": {
     "node": ">=23.0.0",
-    "pnpm": ">=10.0.0"
+    "pnpm": ">=11.0.0"
   },
-  "packageManager": "pnpm@10.32.1"
+  "packageManager": "pnpm@11.0.6"
 }
