@@ -6,14 +6,17 @@ import AvailableLanguages from './AvailableLanguages.tsx';
 import AuthClient from './user/AuthClient.tsx';
 import SignIn from './user/SignIn.tsx';
 
+const cardClassName =
+  'squircle relative m-6 mx-auto w-[min(92vw,760px)] overflow-hidden border border-gray-200/70 bg-white/85 p-5 shadow-[0_16px_70px_-32px_rgba(15,23,42,0.45)] transition duration-200 ease-out hover:shadow-[0_24px_80px_-38px_rgba(15,23,42,0.55)] dark:border-neutral-800 dark:bg-neutral-900/80';
+
+const codeClassName =
+  'squircle border border-input bg-background px-2 py-1 font-mono text-sm text-foreground shadow-sm dark:bg-neutral-900/40';
+
+const linkClassName =
+  'cursor-pointer text-primary underline decoration-foreground/30 underline-offset-4 select-none transition hover:decoration-foreground';
+
 const Link = ({ className, ...props }: LinkProps & AnchorHTMLAttributes<HTMLAnchorElement>) => (
-  <ReactRouterLink
-    className={
-      'text-pink-700 underline hover:no-underline dark:text-pink-400' +
-      (className ? ` ${className}` : '')
-    }
-    {...props}
-  />
+  <ReactRouterLink className={linkClassName + (className ? ` ${className}` : '')} {...props} />
 );
 
 const LocaleSwitcher = () => {
@@ -23,7 +26,7 @@ const LocaleSwitcher = () => {
   return (
     <div>
       <a
-        className="cursor-pointer text-pink-700 underline select-none hover:no-underline dark:text-pink-400"
+        className={linkClassName}
         onClick={() => startTransition(() => setLocale(locale === 'ja_JP' ? 'en_US' : 'ja_JP'))}
       >
         {AvailableLanguages.get(locale)}
@@ -36,19 +39,19 @@ const Home = () => {
   const { data: session } = AuthClient.useSession();
 
   return (
-    <div className="m-6 mx-auto w-8/12 rounded-2xl border border-gray-200 p-4 shadow-md dark:border-neutral-600 dark:bg-neutral-800 dark:shadow-none">
+    <div className={cardClassName}>
       <Stack alignCenter between gap>
-        <h1 className="text-4xl">
+        <h1 className="text-4xl leading-tight font-semibold text-balance">
           <fbt desc="Greeting">Welcome</fbt>
         </h1>
         <LocaleSwitcher />
       </Stack>
-      <p className="my-4">
+      <p className="my-4 text-muted-foreground">
         <em>
           <fbt desc="Tagline">Minimal, fast, sensible defaults.</fbt>
         </em>
       </p>
-      <p className="my-4">
+      <p className="my-4 text-foreground/90">
         <fbt desc="Template tools">
           Using{' '}
           <fbt:list
@@ -77,13 +80,9 @@ const Home = () => {
           .
         </fbt>
       </p>
-      <p className="my-4">
+      <p className="my-4 text-foreground/90">
         <fbt desc="Instructions">
-          Change{' '}
-          <code className="rounded-sm border border-pink-700 bg-neutral-100 px-1 py-1 font-mono text-pink-700 dark:border-pink-400 dark:bg-neutral-700 dark:text-pink-400">
-            src/App.tsx
-          </code>{' '}
-          for live updates.
+          Change <code className={codeClassName}>src/App.tsx</code> for live updates.
         </fbt>
       </p>
       <div>
@@ -95,10 +94,7 @@ const Home = () => {
               </fbt>
             </div>
             <div>
-              <a
-                className="text-pink-700 dark:border-pink-400"
-                onClick={() => AuthClient.signOut()}
-              >
+              <a className={linkClassName} onClick={() => AuthClient.signOut()}>
                 <fbt desc="Logout button">Logout</fbt>
               </a>
             </div>
@@ -117,8 +113,8 @@ const Home = () => {
 };
 
 const About = () => (
-  <div className="m-6 mx-auto w-8/12 rounded-sm border border-gray-200 p-4 shadow-md dark:border-neutral-600 dark:bg-neutral-800 dark:shadow-none">
-    <h1 className="text-4xl">
+  <div className={cardClassName}>
+    <h1 className="text-4xl leading-tight font-semibold text-balance">
       <fbt desc="About">About</fbt>
     </h1>
     <p className="my-4">🤘</p>

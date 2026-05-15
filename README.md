@@ -1,11 +1,11 @@
-# Starter Kit for Vite, React, TypeScript, Tailwind and Node.js ESM
+# Starter Kit for Vite, React, TypeScript & Tailwind
 
 _Minimal, sensible defaults, fast._
 
 Read [the blog post about this template](https://cpojer.net/posts/fastest-frontend-tooling-in-2022).
 
-<img src="https://github.com/user-attachments/assets/9a19ed15-1fcd-447e-bcd9-b1d9f7902555"  width="49%" />
-<img src="https://github.com/user-attachments/assets/6ec7a315-5650-4d46-aedf-82b7c16f52ae"  width="49%" />
+<img src="https://github.com/user-attachments/assets/63982227-510b-4376-a780-7db997026c4a" width="49%" />
+<img src="https://github.com/user-attachments/assets/89b936b0-0fab-43e0-a1f2-97a800e14378" width="49%" />
 
 ## Technologies
 

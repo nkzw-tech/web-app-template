@@ -21,16 +21,6 @@
         }
       ]
     },
-    "mo9dYLVVUbWNkXmctXQ1kw==": {
-      "tokens": [],
-      "types": [],
-      "translations": [
-        {
-          "translation": "{tools} を使用。",
-          "variations": []
-        }
-      ]
-    },
     "/RjeVgRHh9NwlolEiVwI1g==": {
       "tokens": [],
       "types": [],
@@ -90,6 +80,237 @@
           "variations": []
         }
       ]
+    },
+    "Bq4q4JYut9lxfnnl7ak+yQ==": {
+      "description": "Template tools",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "{tools} を使用しています。",
+          "variations": {}
+        }
+      ],
+      "types": []
+    },
+    "xZ69yAY96pLx5bQWaIvgfA==": {
+      "description": "In the phrase: \"Change {=src/App.tsx} for live updates.\"",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "src/App.tsx",
+          "variations": {}
+        }
+      ],
+      "types": []
+    },
+    "1GGCF17s2DbPHv1xQTDxQQ==": {
+      "description": "User greeting",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "こんにちは、{name}",
+          "variations": {}
+        }
+      ],
+      "types": []
+    },
+    "PkKwcnNiHG2aiPl+1FyNPw==": {
+      "description": "Logout button",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "ログアウト",
+          "variations": {}
+        }
+      ],
+      "types": []
+    },
+    "IYUmtYxQtGdt1MucjXrsVA==": {
+      "description": "Label with meaning 'at least number'",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "{number}以上",
+          "variations": {}
+        }
+      ],
+      "types": []
+    },
+    "ZIF1WhVQwt7WZJvFTEbMWw==": {
+      "description": "Label with meaning 'less than number'",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "{number}未満",
+          "variations": {}
+        }
+      ],
+      "types": []
+    },
+    "Oc/9PrbjfyLHS60BXceD1A==": {
+      "description": "A list of items of various types, for example: \"San Francisco; London; Tokyo\". {previous items} and {following items} are themselves lists that contain one or more items.",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "{previous items}、{following items}",
+          "variations": {}
+        }
+      ],
+      "types": []
+    },
+    "AXXbKEUZuc0ji1IClRrOOw==": {
+      "description": "A list of items of various types separated by bullets, for example: \"San Francisco \\u2022 London \\u2022 Tokyo\". {previous items} and {following items} are themselves lists that contain one or more items.",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "{previous items} • {following items}",
+          "variations": {}
+        }
+      ],
+      "types": []
+    },
+    "5hL7VXOBVnetm46YAjpX0g==": {
+      "description": "A list of items of various types with a serial comma, for example: \"item1, item2, and item3\"",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "{list of items}、{last item}",
+          "variations": {}
+        }
+      ],
+      "types": []
+    },
+    "8kLAQ3ffiiFnQ/bWPqXfuQ==": {
+      "description": "A list of items of various types with a serial comma, for example: \"item1, item2, or item3\"",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "{list of items}、または{last item}",
+          "variations": {}
+        }
+      ],
+      "types": []
+    },
+    "8eSaAzrWtAqn9ktNKfkaEg==": {
+      "description": "A list of items of various types, for example: \"item1, item2, item3 or item4\"",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "{list of items}または{last item}",
+          "variations": {}
+        }
+      ],
+      "types": []
+    },
+    "+IBI7kr/mMKdzp+3stDvkw==": {
+      "description": "A list of items of various types, for example: \"San Francisco; London; Tokyo\". {previous items} itself contains one or more items.",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "{previous items}、{last item}",
+          "variations": {}
+        }
+      ],
+      "types": []
+    },
+    "55IeE8c0qqtjTU0lo7q9AA==": {
+      "description": "A list of items of various types separated by bullets, for example: \"San Francisco \\u2022 London \\u2022 Tokyo\". {previous items} contains one or more items.",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "{list of items} • {last item}",
+          "variations": {}
+        }
+      ],
+      "types": []
+    },
+    "6PRJS0QalZfvaN8CkKCUCw==": {
+      "description": "A list of items of various types, for example: \"item1, item2, item3, item4\"",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "{list of items}、{last item}",
+          "variations": {}
+        }
+      ],
+      "types": []
+    },
+    "iKdbkY6JpugkrdDyV3FcxA==": {
+      "description": "Sign in heading",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "サインイン",
+          "variations": {}
+        }
+      ],
+      "types": []
+    },
+    "BMXlIx1BcQbggaPtekaiKQ==": {
+      "description": "Prompt to view the server template repository",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "{=nkzw-tech/server-template} を参照",
+          "variations": {}
+        }
+      ],
+      "types": []
+    },
+    "KwZYUvGOumHA684vwav8Qw==": {
+      "description": "In the phrase: \"See {=nkzw-tech/server-template}\"",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "{=nkzw-tech/server-template}",
+          "variations": {}
+        }
+      ],
+      "types": []
+    },
+    "60LF5FcEok3paLXB9M69gQ==": {
+      "description": "In the phrase: \"See {=nkzw-tech/server-template}\"",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "nkzw-tech/server-template",
+          "variations": {}
+        }
+      ],
+      "types": []
+    },
+    "Y5wqDIyKiQSocyEiZ1mHaA==": {
+      "description": "Email input placeholder",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "メールアドレス",
+          "variations": {}
+        }
+      ],
+      "types": []
+    },
+    "0CNmWrL7FpUVVtj3QrNw8g==": {
+      "description": "Password input placeholder",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "パスワード",
+          "variations": {}
+        }
+      ],
+      "types": []
+    },
+    "/GlexXTL/2S7J2gTYAPviQ==": {
+      "description": "Sign in submit button",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "サインイン",
+          "variations": {}
+        }
+      ],
+      "types": []
     }
   }
 }
