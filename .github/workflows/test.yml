@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [24.21.0]
+        node-version: [24]
     steps:
       - uses: actions/checkout@v4
       - uses: voidzero-dev/setup-vp@v1.21.1
