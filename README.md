@@ -1,5 +1,8 @@
 # Starter Kit for Vite, React, TypeScript & Tailwind
 
+> [!IMPORTANT]
+> **This template is deprecated.** For a new web app, run `vp create fate`. See [fate.technology](https://fate.technology/) for setup and documentation.
+
 _Minimal, sensible defaults, fast._
 
 Read [the blog post about this template](https://cpojer.net/posts/fastest-frontend-tooling-in-2022).
@@ -19,11 +22,10 @@ Read [the blog post about this template](https://cpojer.net/posts/fastest-fronte
 - [TypeScript](https://www.typescriptlang.org)
 - [pnpm](https://pnpm.io/)
 
-Check out the [`nkzw-tech/server-template`](https://github.com/nkzw-tech/server-template) for a GraphQL based server with Pothos and Prisma, or the [`nkzw-tech/expo-app-template`](https://github.com/nkzw-tech/expo-app-template) for building mobile apps.
+For mobile apps, see the [Expo app template](https://github.com/nkzw-tech/expo-app-template).
 
-## Setup
+## Running an existing checkout
 
-- Press the "Use this template" button on the top of this repository's GitHub page.
 - Run `pnpm install` (or `npm install` if you don't use `pnpm`).
 - Run `pnpm dev:setup`.
 - `pnpm dev` for development.
